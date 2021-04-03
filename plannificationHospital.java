@@ -49,9 +49,7 @@ public class Hospital {
 		for(int i = 0; i < jf.length; i++) {
 			if(jf[i]==1)			System.out.println(i +" - ");
 		}
-		
-		System.out.println("aaaaaaaaaaaaaaaaaa\n\n\n\n\n");
-//		
+				
 //		//Affichage du jour congé pour chaque infermier
 //		
 //		for(int i=0;i<C.length;i++) {
@@ -63,10 +61,10 @@ public class Hospital {
 //		}
 //		System.out.println("\n\n\n\n");
 //		
-//Declaration du modele
+//Déclaration du modèle
 		Model m= new Model("Problème des infermiers");
 		
-//Declaration des variables
+//Déclaration des variables
 		IntVar [][][] X = new IntVar[nbinferm][nbjours][nbpostes];
 		IntVar [][] C = new IntVar[nbinferm][nbjours];
 
@@ -131,7 +129,7 @@ public class Hospital {
 					e3[i]=X[i][j][soins];
 					e4[i]=X[i][j][platre];
 				}
-				// deux infermiers sont affectes a salle dechoquage
+				// deux infermiers sont affectes a salle déchoquage
 				m.sum(e1, "=", 2).post();
 				
 				//deux a trois infermiers sont affectés aux postes
